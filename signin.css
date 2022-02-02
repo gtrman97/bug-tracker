@@ -58,3 +58,6 @@ body {
 .alert {
   visibility: hidden;
 }
+#create-account {
+  display: none;
+}
