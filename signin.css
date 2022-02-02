@@ -44,11 +44,12 @@ body {
 }
 
 #main-form{
-  display: none;
+  /* display: none; */
 }
 
 #forgot-password {
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-around;
   text-transform: capitalize;
