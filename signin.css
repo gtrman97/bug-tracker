@@ -17,7 +17,6 @@ body {
   padding: 15px;
   margin: auto;
   border: solid 2px black;
-  /* display: none; */
 }
 
 .form-signin .checkbox {
@@ -43,7 +42,15 @@ body {
 .checkbox input {
   margin-bottom: 1rem;
 }
-#forgot-password {
+
+#main-form{
   display: none;
-  border: solid 2px red;
+}
+
+#forgot-password {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-transform: capitalize;
+  height: 50%;
 }
