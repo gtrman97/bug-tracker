@@ -42,3 +42,6 @@ body {
 .checkbox input {
   margin-bottom: 1rem;
 }
+#forgot-password {
+  display: hidden;
+}
