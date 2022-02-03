@@ -62,3 +62,14 @@ body {
   height: 55%;
   display: none;
 }
+#demo-login{
+  display: none;
+}
+#users {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#users div{
+  padding: 5%;
+}
