@@ -69,7 +69,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 5%;
 }
 #users div{
   padding: 5%;
+}
+.user {
+  border: solid 2px black;
+  margin: 0;
 }
