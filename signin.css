@@ -43,10 +43,6 @@ body {
   margin-bottom: 1rem;
 }
 
-#main-form{
-  /* display: none; */
-}
-
 #forgot-password {
   display: none;
   /* display: flex; */
