@@ -71,3 +71,7 @@ body {
   margin: 0;
   width: 47.5%;
 }
+
+.user p {
+  padding: 5%;
+}
