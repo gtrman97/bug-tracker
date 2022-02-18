@@ -77,3 +77,6 @@ body {
 .mb-3 {
   font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
+.fw-normal {
+  font-weight: 100;
+}
