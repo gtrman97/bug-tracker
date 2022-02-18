@@ -67,11 +67,13 @@ body {
   justify-content: center;
 }
 .user {
-  /* border: solid 2px black; */
   margin: 0;
   width: 47.5%;
 }
 
 .user p {
   padding: 5%;
+}
+.mb-3 {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
