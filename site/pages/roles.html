@@ -34,6 +34,13 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+    #users {
+      border: solid 2px black;
+      scrollbar-width: normal;
+      scrollbar-color: white blue;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -247,7 +254,7 @@
     justify-content: center; gap: 2.5%; border: solid 2px green; height: 100%;">
       <div class="row" style="height: 50%; width: 100%;">
         <div class="col-12" style="height: 20%;">
-          <div class="card my-4">
+          <div class="card my-4" id="users">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
               <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3">
                 <h6 class="text-white text-capitalize ps-3">Select 1 or More Users</h6>
