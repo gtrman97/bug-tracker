@@ -39,6 +39,23 @@
       border: solid 2px black;
       scrollbar-width: normal;
       scrollbar-color: white blue;
+      grid-area: users;
+      /* height: 25%; */
+      width: 500px;
+    }
+    #personnel {
+      grid-area: personnel;
+      width: 600px;
+    }
+    #roles {
+      grid-area: roles;
+      width: 525px;
+    }
+    #assign {
+      color: white;
+      background-color: blue;
+      width: 100%;
+      height: 8.8%;
     }
   </style>
 </head>
@@ -250,8 +267,10 @@
       </div>
     </nav>
     <!-- End Navbar -->
-    <div class="container-fluid py-4" style="display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr;
-    justify-content: center; gap: 2.5%; border: solid 2px green; height: 100%;">
+    <div class="container-fluid py-4" style="display: grid; grid-template-areas: 
+    'users personnel'
+    'roles personnel';
+    justify-content: center; gap: 2.5%; height: 100%;">
       <div class="row" style="height: 50%; width: 100%;">
         <div class="col-12" style="height: 20%;">
           <div class="card my-4" id="users">
@@ -356,7 +375,7 @@
           </div>
         </div>
       </div>
-      <div class="row" style="height: 200%; border: solid 2px green;">
+      <div class="row" id="personnel">
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -515,9 +534,14 @@
               </div>
             </div>
           </div>
+          <button id='assign' class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3
+          text-white text-capitalize ps-3">
+            Assign
+          </button>
         </div>
+        
       </div>
-      <div class="row" style="height: 50%; width: 100%;">
+      <div class="row" id="roles">
         <div class="col-12">
           <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -555,7 +579,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Laurent Perrier</h6>
+                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Developer</h6>
                           </div>
                         </div>
                       </td>
@@ -564,25 +588,7 @@
                       <td>
                         <div class="d-flex px-2 py-1">
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Michael Levi</h6>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Richard Gran</h6>
-                          </div>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>
-                        <div class="d-flex px-2 py-1">
-                          <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Miriam Eric</h6>
+                            <h6 class="mb-0 text-sm" style="font-weight: normal;">Submitter</h6>
                           </div>
                         </div>
                       </td>
