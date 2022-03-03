@@ -698,17 +698,17 @@
     // selections[0].classList.add('bg-gradient-secondary');
     // let users = document.getElementsByClassName('user');
     // users[0].style.color = 'white';
-    selections.forEach(element => {
-      element.addEventListener('click', function() {
-        element.classList.toggle('bg-gradient-secondary');
-        element.querySelector('.user').classList.toggle('white');
+    selections.forEach(user => {
+      user.addEventListener('click', function() {
+        user.classList.toggle('bg-gradient-secondary');
+        user.querySelector('.user').classList.toggle('white');
       }
       );
     });
-    roles.forEach(element => {
-      element.addEventListener('click', function() {
-        element.classList.toggle('bg-gradient-success');
-        element.querySelector('.role').classList.toggle('white');
+    roles.forEach(role => {
+      role.addEventListener('click', function() {
+        role.classList.toggle('bg-gradient-success');
+        role.querySelector('.role').classList.toggle('white');
       }
       );
     });
