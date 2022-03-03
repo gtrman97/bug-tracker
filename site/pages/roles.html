@@ -60,6 +60,9 @@
       justify-content: center;
       align-items: center;
     }
+    .white {
+      color: white;
+    }
   </style>
 </head>
 
@@ -698,8 +701,8 @@
     // users[0].style.color = 'white';
     selections.forEach(element => {
       element.addEventListener('click', function() {
-        element.classList.add('bg-gradient-secondary');
-        element.querySelector('.user').style.color = 'white';
+        element.classList.toggle('bg-gradient-secondary');
+        element.querySelector('.user').classList.toggle('white');
       }
       );
     });
