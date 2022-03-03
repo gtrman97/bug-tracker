@@ -705,10 +705,14 @@
       }
       );
     });
-    roles.forEach(role => {
-      role.addEventListener('click', function() {
-        role.classList.toggle('bg-gradient-success');
-        role.querySelector('.role').classList.toggle('white');
+    roles.forEach(element => {
+      element.addEventListener('click', function() {
+        for(let role of roles){
+          role.classList.remove('bg-gradient-success');
+          role.querySelector('.role').classList.remove('white');
+        }
+        element.classList.toggle('bg-gradient-success');
+        element.querySelector('.role').classList.toggle('white');
       }
       );
     });
