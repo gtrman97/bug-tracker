@@ -390,7 +390,7 @@
             </div>
             <div class="card-body px-0 pb-2">
               <div class="table-responsive p-0">
-                <table class="table align-items-center mb-0">
+                <table class="table align-items-center mb-0" id="my-personnel">
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User Name</th>
@@ -724,6 +724,26 @@
     });
     let assign = (users, role) => {
       console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
+      let table = document.getElementById('my-personnel'), row = table.insertRow(1), 
+      cell1 = row.insertCell(0), cell2 = row.insertCell(1), cell3 = row.insertCell(2),
+      div1 = document.createElement('div'), div2 = document.createElement('div'), 
+      name = document.createElement('h6'), email = document.createElement('p'),
+      title = document.createElement('span');
+      div1.classList.add('d-flex', 'px-2', 'py-1');
+      div2.classList.add('d-flex', 'flex-column', 'justify-content-center');
+      name.classList.add('mb-0', 'text-sm');
+      email.classList.add('text-xs', 'text-secondary', 'mb-0');
+      title.classList.add('text-secondary', 'text-xs');
+      cell3.classList.add('align-middle', 'text-center');
+      cell1.appendChild(div1);
+      div1.appendChild(div2);
+      div2.appendChild(name);
+      cell2.appendChild(email);
+      cell3.appendChild(title);
+      name.innerText = `${Array.from(users)[0]}`;
+      email.innerText = 'john@john.com';
+      title.innerText = role;
+      
     }
     document.getElementById('assign').addEventListener('click', () => {
       assign(users, role);
