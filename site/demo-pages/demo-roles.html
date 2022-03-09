@@ -704,7 +704,6 @@
           if(selection.classList.contains('selected-user')) users.add(selection.innerText);
           else users.delete(selection.innerText);
         }
-        console.log(Array.from(users));
 
       }
       );
@@ -726,9 +725,8 @@
     let assign = (users, role) => {
       console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
     }
-    document.getElementById('assign').addEventListener('click', function(users, role){
-      console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
-
+    document.getElementById('assign').addEventListener('click', () => {
+      assign(users, role);
     });
   </script>
   <!-- Github buttons -->
