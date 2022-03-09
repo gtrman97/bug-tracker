@@ -720,9 +720,15 @@
         element.querySelector('.role').classList.toggle('white');
         element.classList.toggle('selected-role');
         role = element.innerText;
-        console.log(role);
       }
       );
+    });
+    let assign = (users, role) => {
+      console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
+    }
+    document.getElementById('assign').addEventListener('click', function(users, role){
+      console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
+
     });
   </script>
   <!-- Github buttons -->
