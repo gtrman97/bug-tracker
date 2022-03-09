@@ -701,7 +701,11 @@
     selections.forEach(user => {
       user.addEventListener('click', function() {
         user.classList.toggle('bg-gradient-secondary');
+        user.classList.toggle('selected-user');
         user.querySelector('.user').classList.toggle('white');
+        let selection = document.getElementsByClassName('selected-user')[0].innerText;
+        console.log(selection);
+
       }
       );
     });
