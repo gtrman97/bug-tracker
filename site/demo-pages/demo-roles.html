@@ -408,7 +408,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">john@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">john@john-michael.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Developer</span>
@@ -423,7 +423,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">alexa@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">alexa@alexa-liras.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Submitter</span>
@@ -438,7 +438,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">lauren@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">lauren@lauren-perrier.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Submitter</span>
@@ -453,7 +453,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">michael@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">michael@michael-levi.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Project Manager</span>
@@ -468,7 +468,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">richard@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">richard@richard-gran.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Project Manager</span>
@@ -483,7 +483,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">miriam@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">miriam@miriam-eric.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">N/A</span>
@@ -498,7 +498,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">jimmy@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">jimmy@jimmy-jones.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Developer</span>
@@ -513,7 +513,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">trevor@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">trevor@trevor-strnad.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Project Manager</span>
@@ -528,7 +528,7 @@
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs text-secondary mb-0">brian@creative-tim.com</p>
+                        <p class="text-xs text-secondary mb-0">brian@brian-eschbach.com</p>
                       </td>
                       <td class="align-middle text-center">
                         <span class="text-secondary text-xs">Project Manager</span>
@@ -693,24 +693,24 @@
       }
       Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
     }
-    let users = new Set(), user_selections = [...document.getElementsByClassName('select-user')];
-    let role, roles = [...document.querySelectorAll('.select-role')];
+    let selected_users = new Set(), user_selections = [...document.getElementsByClassName('select-user')];
+    let selected_role, role_selections = [...document.querySelectorAll('.select-role')];
     user_selections.forEach(user => {
       user.addEventListener('click', function() {
         user.classList.toggle('bg-gradient-secondary');
         user.classList.toggle('selected-user');
         user.querySelector('.user').classList.toggle('white');
         for(let selection of user_selections){
-          if(selection.classList.contains('selected-user')) users.add(selection.innerText);
-          else users.delete(selection.innerText);
+          if(selection.classList.contains('selected-user')) selected_users.add(selection.innerText);
+          else selected_users.delete(selection.innerText);
         }
-
+        console.log(...selected_users);
       }
       );
     });
-    roles.forEach(element => {
+    role_selections.forEach(element => {
       element.addEventListener('click', function() {
-        for(let role of roles){
+        for(let role of role_selections){
           role.classList.remove('bg-gradient-success');
           role.querySelector('.role').classList.remove('white');
           role.classList.remove('selected-role');
@@ -718,12 +718,12 @@
         element.classList.toggle('bg-gradient-success');
         element.querySelector('.role').classList.toggle('white');
         element.classList.toggle('selected-role');
-        role = element.innerText;
+        selected_role = element.innerText;
       }
       );
     });
-    let assign = (users, role) => {
-      console.log(`You have selected ${Array.from(users)[0]} to be a ${role}`);
+    let assign = (selected_users, selected_role) => {
+      console.log(`You have selected ${Array.from(selected_users)[0]} to be a ${role}`);
       let table = document.getElementById('my-personnel'), row = table.insertRow(1), 
       cell1 = row.insertCell(0), cell2 = row.insertCell(1), cell3 = row.insertCell(2),
       div1 = document.createElement('div'), div2 = document.createElement('div'), 
@@ -740,13 +740,39 @@
       div2.appendChild(name);
       cell2.appendChild(email);
       cell3.appendChild(title);
-      name.innerText = `${Array.from(users)[0]}`;
+      name.innerText = `${Array.from(selected_users)[0]}`;
       email.innerText = 'john@john.com';
       title.innerText = role;
       
     }
+    // From the red table 
+    let table = document.getElementById('my-personnel'), assignees = Array.from(table.getElementsByTagName('h6'));
+    for(let i=0; i<assignees.length; i++){
+      assignees[i] = assignees[i].innerText
+    }
+    console.log(assignees.indexOf('Alexa Liras'));
+
+
+    // console.log(assignees.indexOf('John Michael')]);
+    // console.log(assignments[0].innerText);
+    // for(let i=0; i<assignments.length; i++){
+    //   if(assignments[i].innerText === );
+    // }
+    // selected_users = Array.from(selected_users);
+    for(let i=0; i<selected_users.length; i++){
+      console.log(selected_users[i].innerText);
+    }
+    // console.log(user_selections[0].innerText);
+    // console.log(document.getElementById('my-personnel').rows[1].item);
+    // console.log(user_selections[0].innerText);
+    // console.log(sele);
+
     document.getElementById('assign').addEventListener('click', () => {
-      assign(users, role);
+      assign(selected_users, selected_role);
+      // selected_users = Array.from(selected_users);
+      // for(let i=0; i<selected_users.length; i++){
+      // console.log(selected_users[i]);
+    // }
     });
   </script>
   <!-- Github buttons -->
