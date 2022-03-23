@@ -723,56 +723,43 @@
       );
     });
     let assign = (selected_users, selected_role) => {
-      console.log(`You have selected ${Array.from(selected_users)[0]} to be a ${role}`);
-      let table = document.getElementById('my-personnel'), row = table.insertRow(1), 
-      cell1 = row.insertCell(0), cell2 = row.insertCell(1), cell3 = row.insertCell(2),
-      div1 = document.createElement('div'), div2 = document.createElement('div'), 
-      name = document.createElement('h6'), email = document.createElement('p'),
-      title = document.createElement('span');
-      div1.classList.add('d-flex', 'px-2', 'py-1');
-      div2.classList.add('d-flex', 'flex-column', 'justify-content-center');
-      name.classList.add('mb-0', 'text-sm');
-      email.classList.add('text-xs', 'text-secondary', 'mb-0');
-      title.classList.add('text-secondary', 'text-xs');
-      cell3.classList.add('align-middle', 'text-center');
-      cell1.appendChild(div1);
-      div1.appendChild(div2);
-      div2.appendChild(name);
-      cell2.appendChild(email);
-      cell3.appendChild(title);
-      name.innerText = `${Array.from(selected_users)[0]}`;
-      email.innerText = 'john@john.com';
-      title.innerText = role;
-      
-    }
-    // From the red table 
-    let table = document.getElementById('my-personnel'), assignees = Array.from(table.getElementsByTagName('h6'));
-    for(let i=0; i<assignees.length; i++){
-      assignees[i] = assignees[i].innerText
-    }
-    console.log(assignees.indexOf('Alexa Liras'));
+      let table = document.getElementById('my-personnel'), rows = Array.from(table.getElementsByTagName('tr'));
+      selected_users = Array.from(selected_users);
+      console.log(`You have selected ${selected_users[0]} to be a ${selected_role}`);
+      // add new row to table 
+      // let table = document.getElementById('my-personnel'), row = table.insertRow(1), 
+      // cell1 = row.insertCell(0), cell2 = row.insertCell(1), cell3 = row.insertCell(2),
+      // div1 = document.createElement('div'), div2 = document.createElement('div'), 
+      // name = document.createElement('h6'), email = document.createElement('p'),
+      // title = document.createElement('span');
+      // div1.classList.add('d-flex', 'px-2', 'py-1');
+      // div2.classList.add('d-flex', 'flex-column', 'justify-content-center');
+      // name.classList.add('mb-0', 'text-sm');
+      // email.classList.add('text-xs', 'text-secondary', 'mb-0');
+      // title.classList.add('text-secondary', 'text-xs');
+      // cell3.classList.add('align-middle', 'text-center');
+      // cell1.appendChild(div1);
+      // div1.appendChild(div2);
+      // div2.appendChild(name);
+      // cell2.appendChild(email);
+      // cell3.appendChild(title);
+      // name.innerText = `${Array.from(selected_users)[0]}`;
+      // email.innerText = 'john@john.com';
+      // title.innerText = selected_role;
 
-
-    // console.log(assignees.indexOf('John Michael')]);
-    // console.log(assignments[0].innerText);
-    // for(let i=0; i<assignments.length; i++){
-    //   if(assignments[i].innerText === );
-    // }
-    // selected_users = Array.from(selected_users);
-    for(let i=0; i<selected_users.length; i++){
-      console.log(selected_users[i].innerText);
+      //change role for exisitng rows
+      for(let i=0; i<selected_users.length; i++){
+        for(let j=1; j<rows.length; j++){
+        if(rows[j].children[0].innerText === selected_users[i]){
+        rows[j].children[2].innerText = selected_role;
+        rows[j].children[2].classList.add('text-secondary', 'text-xs');
+      }
     }
-    // console.log(user_selections[0].innerText);
-    // console.log(document.getElementById('my-personnel').rows[1].item);
-    // console.log(user_selections[0].innerText);
-    // console.log(sele);
+      }
+    }
 
     document.getElementById('assign').addEventListener('click', () => {
       assign(selected_users, selected_role);
-      // selected_users = Array.from(selected_users);
-      // for(let i=0; i<selected_users.length; i++){
-      // console.log(selected_users[i]);
-    // }
     });
   </script>
   <!-- Github buttons -->
