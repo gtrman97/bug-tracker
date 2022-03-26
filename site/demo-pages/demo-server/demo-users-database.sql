@@ -9,7 +9,7 @@ INSERT INTO demo_users (full_name, email, title) VALUES ('Alexa Liras', 'alexa@a
 INSERT INTO demo_users (full_name, email, title) VALUES ('Lauren Perrier', 'lauren@lauren-perrier.com', 'Submitter');
 INSERT INTO demo_users (full_name, email, title) VALUES ('Michael Levi', 'michael@michael-levi.com', 'Project Manager');
 INSERT INTO demo_users (full_name, email, title) VALUES ('Richard Gran', 'richard@richard-gran.com', 'Project Manager');
-INSERT INTO demo_users (full_name, email) VALUES ('Miriam Eric', 'miriam@miriam-eric.com', 'N/A');
+INSERT INTO demo_users (full_name, email, title) VALUES ('Miriam Eric', 'miriam@miriam-eric.com', 'N/A');
 INSERT INTO demo_users (full_name, email, title) VALUES ('Jimmy Jones', 'jimmy@jimmy-jones.com', 'Developer');
 INSERT INTO demo_users (full_name, email, title) VALUES ('Trevor Strnad', 'trevor@trevor-strnad.com', 'Project Manager');
 INSERT INTO demo_users (full_name, email, title) VALUES ('Brian Eschbach', 'brian@brian-eschbach.com', 'Project Manager');
