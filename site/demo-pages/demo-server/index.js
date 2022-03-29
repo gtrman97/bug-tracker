@@ -8,7 +8,19 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-    res.send("Hello from Bug Tracker Express");
+    res.send("Hello from Express");
+})
+app.put('/users', async (req, res) => {
+
+    try {
+        const {names} = req.body;
+        const {position} = req.body;
+        // const allUsers = await pool.query('SELECT * FROM demo_users');
+
+        console.log(`${names} will be assigned to ${position}`);
+    } catch (err) {
+        console.log(err.message);
+    }
 })
 
 app.listen(port, () => {

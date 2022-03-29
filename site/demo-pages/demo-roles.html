@@ -756,6 +756,16 @@
       }
     }
       }
+
+      const body = {names: selected_users,
+                   position: selected_role
+      };
+
+      fetch('http://localhost:5000/users', {
+        method: "PUT",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(body)
+      });
     }
 
     document.getElementById('assign').addEventListener('click', () => {
