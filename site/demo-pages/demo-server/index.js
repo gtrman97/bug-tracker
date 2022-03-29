@@ -15,9 +15,11 @@ app.put('/users', async (req, res) => {
     try {
         const {names} = req.body;
         const {position} = req.body;
+        const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
+        [position, names[0]]);
         // const allUsers = await pool.query('SELECT * FROM demo_users');
-
-        console.log(`${names} will be assigned to ${position}`);
+        // console.log(`${names} will be assigned to ${position}`);
+        console.log(names);
     } catch (err) {
         console.log(err.message);
     }
