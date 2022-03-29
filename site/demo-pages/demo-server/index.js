@@ -13,13 +13,17 @@ app.get('/', (req, res) => {
 app.put('/users', async (req, res) => {
 
     try {
+        
         const {names} = req.body;
         const {position} = req.body;
         const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
         [position, names[0]]);
-        // const allUsers = await pool.query('SELECT * FROM demo_users');
-        // console.log(`${names} will be assigned to ${position}`);
-        console.log(names);
+
+        // for(let i =0; i<names.length; i++){
+        //     const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
+        //     [position, names[i]]);
+        // }
+
     } catch (err) {
         console.log(err.message);
     }
