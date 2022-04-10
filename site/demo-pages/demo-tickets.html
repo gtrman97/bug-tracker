@@ -34,6 +34,15 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+    #tasks {
+      display: flex;
+      gap: 2%;
+    }
+    #to-do, #in-progress, #completed {
+      width: 33%;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -593,6 +602,491 @@
             </div>
           </div>
         </div>
+      <div id="tasks">
+        <div class="row" id="to-do">
+          <div class="col-12">
+            <div class="card my-4">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">Not Started</h6>
+                </div>
+              </div>
+              <div class="card-body px-0 pb-2">
+                <div class="table-responsive p-0" style="height: 450px;">
+                  <table class="table align-items-center mb-0" id="my-personnel">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7" style="width: 2px;">Task</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Assignee</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Time</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="text-xs mb-0 text-secondary">John Michael</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">john@john-michael.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">alexa@alexa-liras.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lauren Perrier</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">lauren@lauren-perrier.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Michael Levi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">michael@michael-levi.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Richard Gran</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">richard@richard-gran.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">miriam@miriam-eric.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">N/A</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Jimmy Jones</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">jimmy@jimmy-jones.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Trevor Strnad</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">trevor@trevor-strnad.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Brian Eschbach</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">brian@brian-eschbach.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="in-progress">
+          <div class="col-12">
+            <div class="card my-4">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-secondary shadow-primary border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">In Progress</h6>
+                </div>
+              </div>
+              <div class="card-body px-0 pb-2">
+                <div class="table-responsive p-0" style="height: 450px;">
+                  <table class="table align-items-center mb-0" id="my-personnel">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User Name</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">John Michael</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">john@john-michael.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">alexa@alexa-liras.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lauren Perrier</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">lauren@lauren-perrier.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Michael Levi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">michael@michael-levi.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Richard Gran</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">richard@richard-gran.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">miriam@miriam-eric.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">N/A</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Jimmy Jones</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">jimmy@jimmy-jones.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Trevor Strnad</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">trevor@trevor-strnad.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Brian Eschbach</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">brian@brian-eschbach.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row" id="completed">
+          <div class="col-12">
+            <div class="card my-4">
+              <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-success shadow-primary border-radius-lg pt-4 pb-3">
+                  <h6 class="text-white text-capitalize ps-3">Completed</h6>
+                </div>
+              </div>
+              <div class="card-body px-0 pb-2">
+                <div class="table-responsive p-0" style="height: 450px;">
+                  <table class="table align-items-center mb-0" id="my-personnel">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">User Name</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Email</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Role</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">John Michael</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">john@john-michael.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Alexa Liras</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">alexa@alexa-liras.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Lauren Perrier</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">lauren@lauren-perrier.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Submitter</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Michael Levi</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">michael@michael-levi.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Richard Gran</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">richard@richard-gran.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Miriam Eric</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">miriam@miriam-eric.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">N/A</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Jimmy Jones</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">jimmy@jimmy-jones.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Developer</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Trevor Strnad</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">trevor@trevor-strnad.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">Brian Eschbach</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-xs text-secondary mb-0">brian@brian-eschbach.com</p>
+                        </td>
+                        <td class="align-middle text-center">
+                          <span class="text-secondary text-xs">Project Manager</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       </div>
     </div>
   </main>
