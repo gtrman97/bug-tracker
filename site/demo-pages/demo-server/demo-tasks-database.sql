@@ -7,3 +7,13 @@ create table demo_tasks (
 );
 
 INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 1', 1);
+INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 2', 1);
+INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 3', 1);
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 4', 1, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 5', 1, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 6', 1, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 7', 1, 'Completed');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 8', 1, 'Completed');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 9', 1, 'Completed');
+
+
