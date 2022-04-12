@@ -16,4 +16,14 @@ INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 7', 1,
 INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 8', 1, 'Completed');
 INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 9', 1, 'Completed');
 
+INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 4', 2);
+INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 5', 2);
+INSERT INTO demo_tasks (task_name, project_id) VALUES ('Task 6', 2);
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 7', 2, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 8', 2, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 9', 2, 'In Progress');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 1', 2, 'Completed');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 2', 2, 'Completed');
+INSERT INTO demo_tasks (task_name, project_id, task_status) VALUES ('Task 3', 2, 'Completed');
+
 
