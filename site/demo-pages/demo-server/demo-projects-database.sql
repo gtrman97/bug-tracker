@@ -5,3 +5,5 @@ create table demo_projects (
     project_status VARCHAR(25) NOT NULL
 );
 INSERT INTO demo_projects (project_name, project_manager_id, project_status) VALUES ('Project 1', 4, 'In Progress');
+INSERT INTO demo_projects (project_name, project_manager_id, project_status) VALUES ('Project 2', 8, 'In Progress');
+INSERT INTO demo_projects (project_name, project_manager_id, project_status) VALUES ('Project 3', 9, 'In Progress');
