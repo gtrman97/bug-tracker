@@ -16,13 +16,13 @@ app.put('/users', async (req, res) => {
         
         const {names} = req.body;
         const {position} = req.body;
-        // const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
-        // [position, names[0]]);
+        const updateRole = await pool.query('UPDATE demo_users SET role_id = (SELECT id FROM demo_roles WHERE role_name = $1) WHERE full_name = $2', 
+        [position, names[0]]);
 
-        for(let i =0; i<names.length; i++){
-            const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
-            [position, names[i]]);
-        }
+        // for(let i =0; i<names.length; i++){
+        //     const updateRole = await pool.query('UPDATE demo_users SET title = $1 WHERE full_name = $2', 
+        //     [position, names[i]]);
+        // }
 
         console.log(`${names[0]} has been updated to ${position}`);
 
