@@ -5,7 +5,10 @@ import "./StatusColumn.css";
 // import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700";
 // import "https://fonts.googleapis.com/icon?family=Material+Icons+Round";
 
-function StatusColumn() {
+function StatusColumn(props) {
+
+    console.log(props.status);
+
   return (
     <div className="row" style={{width: '33%'}}>
       <div className="col-12">
