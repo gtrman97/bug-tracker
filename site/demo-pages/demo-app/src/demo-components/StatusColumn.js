@@ -7,7 +7,7 @@ import "./StatusColumn.css";
 
 function StatusColumn() {
   return (
-    <div className="row" id="to-do">
+    <div className="row" style={{width: '33%'}}>
       <div className="col-12">
         <div className="card my-4">
           <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -16,13 +16,13 @@ function StatusColumn() {
             </div>
           </div>
           <div className="card-body px-0 pb-2">
-            <div className="table-responsive p-0" style="height: 450px;">
+            <div className="table-responsive p-0" style={{height: 450}}>
               <table className="table align-items-center mb-0" id="my-personnel">
                 <thead>
                   <tr>
                     <th
                       className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                      style="width: 2px;"
+                      style={{width: 2}}
                     >
                       Task
                     </th>
