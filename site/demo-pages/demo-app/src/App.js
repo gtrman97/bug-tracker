@@ -1,7 +1,9 @@
+import StatusColumn from "./demo-components/StatusColumn";
+
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <StatusColumn />
     </div>
   );
 }
