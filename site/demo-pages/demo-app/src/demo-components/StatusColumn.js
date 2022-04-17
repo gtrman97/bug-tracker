@@ -7,15 +7,16 @@ import "./StatusColumn.css";
 
 function StatusColumn(props) {
 
-    console.log(props.status);
+    let state = props.status;
+    let color = props.color;
 
   return (
     <div className="row" style={{width: '33%'}}>
       <div className="col-12">
         <div className="card my-4">
           <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-            <div className="bg-gradient-primary shadow-primary border-radius-lg pt-4 pb-3">
-              <h6 className="text-white text-capitalize ps-3">Not Started</h6>
+            <div className={`bg-gradient-${color} shadow-primary border-radius-lg pt-4 pb-3`}>
+              <h6 className="text-white text-capitalize ps-3">{state}</h6>
             </div>
           </div>
           <div className="card-body px-0 pb-2">
@@ -25,7 +26,6 @@ function StatusColumn(props) {
                   <tr>
                     <th
                       className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
-                      style={{width: 2}}
                     >
                       Task
                     </th>
