@@ -4,7 +4,6 @@ import "../bootstrap-css/material-dashboard.css?v=3.0.0";
 
 function Ticket() {
   return (
-    <tbody>
       <tr>
         <td className="align-middle text-center">
           <div className="d-flex flex-column justify-content-center">
@@ -18,7 +17,6 @@ function Ticket() {
           <span className="text-secondary text-xs">1h</span>
         </td>
       </tr>
-    </tbody>
   );
 }
 
