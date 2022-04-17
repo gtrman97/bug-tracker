@@ -2,13 +2,10 @@ import '../bootstrap-css/nucleo-icons.css';
 import '../bootstrap-css/nucleo-svg.css';
 import "../bootstrap-css/material-dashboard.css?v=3.0.0";
 import "./StatusColumn.css";
-// import "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700";
-// import "https://fonts.googleapis.com/icon?family=Material+Icons+Round";
 
 function StatusColumn(props) {
 
-    let state = props.status;
-    let color = props.color;
+    let state = props.status, color = props.color;
 
   return (
     <div className="row" style={{width: '33%'}}>
@@ -25,28 +22,28 @@ function StatusColumn(props) {
                 <thead>
                   <tr>
                     <th
-                      className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                      className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
                     >
                       Task
                     </th>
-                    <th className="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
-                      Assignee
+                    <th className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
+                      Developer
                     </th>
-                    <th className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">
+                    <th className="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7"
+                    >
                       Time
                     </th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <td>
-                      <div className="d-flex px-2 py-1">
+                    <td className="align-middle text-center">
                         <div className="d-flex flex-column justify-content-center">
-                          <h6 className="text-xs mb-0 text-secondary">Task 1</h6>
+                          <h6 className="text-center text-xs mb-0 text-secondary">Task 1</h6>
                         </div>
-                      </div>
                     </td>
-                    <td>
+                    <td className="text-center">
                       <p className="text-xs text-secondary mb-0">John Michael</p>
                     </td>
                     <td className="align-middle text-center">
