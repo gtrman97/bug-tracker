@@ -6,7 +6,10 @@ import Ticket from "./Ticket";
 
 function StatusColumn(props) {
 
-    let state = props.status, color = props.color;
+    let {status, color, ticket} = props;
+
+
+    console.log(status);
 
   return (
     <div className="row" style={{width: '33%'}}>
@@ -14,7 +17,7 @@ function StatusColumn(props) {
         <div className="card my-4">
           <div className="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
             <div className={`bg-gradient-${color} shadow-primary border-radius-lg pt-4 pb-3`}>
-              <h6 className="text-white text-capitalize ps-3">{state}</h6>
+              <h6 className="text-white text-capitalize ps-3">{status}</h6>
             </div>
           </div>
           <div className="card-body px-0 pb-2">
