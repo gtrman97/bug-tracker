@@ -34,6 +34,19 @@
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
+  <style>
+        #assign {
+      color: white;
+      background-color: blue;
+      width: 250px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+      padding-top: 1.5%;
+    }
+  </style>
 </head>
 
 <body class="g-sidenav-show  bg-gray-200">
@@ -252,8 +265,12 @@
                 <h6 class="text-white text-capitalize ps-3">My Projects</h6>
               </div>
             </div>
-            <div class="ms-md-auto pe-md-3 d-flex align-items-center" style="margin: 1.25%;">
-              <div class="input-group input-group-outline">
+            <div class="ms-md-auto pe-md-3 d-flex align-items-center" style="margin: 1.25%; padding: 1.25%; width: 100%; display: flex; justify-content: space-between;">
+              <button id='assign' class="bg-gradient-secondary shadow-primary border-radius-lg pb-3
+              text-white text-capitalize">
+                create project
+              </button>
+              <div class="input-group input-group-outline" style="width: 250px; margin-right: 0;" >
                 <!-- <button class="form-control">Create Project</button> -->
                 <label class="form-label">Search My Projects...</label>
                 <input type="text" class="form-control">
