@@ -35,6 +35,17 @@
   <!-- CSS Files -->
   <link id="pagestyle" href="../assets/css/material-dashboard.css?v=3.0.0" rel="stylesheet" />
   <style>
+        #assign {
+      color: white;
+      background-color: blue;
+      width: 250px;
+      height: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-left: 0;
+      padding-top: 1.5%;
+    }
     #tasks {
       display: flex;
       gap: 2%;
@@ -251,6 +262,20 @@
         </div>
       </div>
     </nav>
+    <div style="display: flex; justify-content: space-between; margin: 0; padding: 0% 1.5%;">
+      <form action="/action_page.php">
+        <select name="projects" id="projects" style="padding: 10%; width: 275%; text-align: center;">
+          <option value="volvo">Project 1</option>
+          <option value="saab">Project 2</option>
+          <option value="opel">Project 3</option>
+          <option value="audi">Project 4</option>
+        </select>
+      </form>
+      <button data-modal-target="#modal" id='assign' class="bg-gradient-secondary shadow-primary border-radius-lg pb-3
+      text-white text-capitalize">
+        create ticket
+      </button>
+    </div>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
       <div class="row">
