@@ -1,4 +1,7 @@
 import StatusColumn from "./demo-components/StatusColumn";
+import Dropdown from "./demo-components/Dropdown";
+import CreateButton from "./demo-components/CreateButton";
+import './App.css';
 
 function App() {
 
@@ -13,8 +16,11 @@ function App() {
 
   return (
     <div>
-      <button onClick={createTicket}>Create Ticket</button>
-    <div style={{display: "flex", gap: "2%", padding: "2.5%", margin: "5%", border: "solid 2px black"}}>
+      <div id='header'>
+        <Dropdown id='dropdown' style={{width: 3000}}/>
+        <CreateButton />
+      </div>
+    <div style={{display: "flex", gap: "2%", padding: "2.5%", margin: "1%", border: "solid 2px black"}}>
       <StatusColumn status={'not started'} color={'primary'} ticket={createTicket()}/>
       <StatusColumn status={'in progress'} color={'secondary'} ticket={createTicket()}/>
       <StatusColumn status={'completed'} color={'success'} ticket={createTicket()}/>
